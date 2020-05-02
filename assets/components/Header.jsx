@@ -36,12 +36,12 @@ class Header extends React.Component {
                         <li className="right">
                             <ul>
                                 <li className="attorneys">
-                                    <a onClick={this.handleClick} href="/attorneys">
+                                    <a onClick={this.handleClick} href="/attorneys/">
                                         Attorneys
                                     </a>
                                 </li>
                                 <li className="contact">
-                                    <a onClick={this.handleClick} href="/contact">
+                                    <a onClick={this.handleClick} href="/contact/">
                                         Contact
                                     </a>
                                 </li>
@@ -53,7 +53,7 @@ class Header extends React.Component {
                             </a>
                         </li>
                         <li className="std firm">
-                            <a href="/firm" onClick={this.handleClick}>
+                            <a href="/firm/" onClick={this.handleClick}>
                                 Firm
                             </a>
                         </li>
@@ -75,7 +75,7 @@ class Header extends React.Component {
     }
 
     jumpToHref(href, behavior) {
-        const label = href.split('/').pop() || 'home';
+        const label = href.replace(/\//g, '') || 'home';
         const div = document.querySelector(`[data-label="${label}"]`);
 
         history.pushState(null, null, href);
