@@ -15,6 +15,7 @@ deploy:
 	git checkout master && \
 	git reset --hard build && \
 	mv dist/* . && \
+	echo "rscottdover.com" > CNAME && \
 	git add -A && \
 	git commit -am "`date +'%y/%m/%d'` deployment" && \
 	git push -f && \
