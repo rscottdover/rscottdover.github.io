@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "build": "parcel build index.html",
+    "postbuild": "react-snap"
+  },
+  "dependencies": {
+    "jquery": ">=1.8.0",
+    "react": "^0.14.0 || ^15.0.0 || ^16",
+    "react-dom": "^0.14.0 || ^15.0.0 || ^16",
+    "react-modal": "^3.11.2",
+    "react-slick": "^0.25.2",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "react-snap": "^1.23.0"
+  },
+  "reactSnap": {
+    "source": "dist"
+  }
+}
