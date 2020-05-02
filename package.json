@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "watch": "parcel index.html",
     "build": "parcel build index.html",
     "postbuild": "react-snap"
   },

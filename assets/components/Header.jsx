@@ -83,10 +83,9 @@ class Header extends React.Component {
             ga('send', 'pageview', href);
         }
 
-        window.scrollTo({
-            top: div.offsetTop + 350,
-            behavior,
-        });
+        const top = label !== 'home' ? div.offsetTop + 350 : 0;
+
+        window.scrollTo({ top, behavior });
     }
 }
 
